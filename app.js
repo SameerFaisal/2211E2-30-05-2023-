@@ -87,6 +87,40 @@
 
 // class ElectricCar extends Car{}
 
+//01-06-2023
+
+class Vehicle{
+    name
+    brand
+    number
+    color
+    model
+    constructor(name,brand,number,color,model){
+        this.name=name
+        this.brand=brand
+        this.number=number
+        this.color=color
+        this.model=model
+    }
+    displayDetails(){
+        console.log(`Vehicle name is ${this.name} made by ${this.brand} having number ${this.number} colored ${this.color} and model is ${this.model}`)
+    }
+}
+
+class Car extends Vehicle{
+    transmission
+    constructor(name,brand,number,color,model,transmission){
+        super(name,brand,number,color,model)
+        this.transmission=transmission
+
+}
+displayDetails(){
+    super.displayDetails()
+    console.log(`Transmission is ${this.transmission}`)
+}
+}
+const c1=new Car("Corolla","toyota","AAB-222","Black",2022,"Auto")
+c1.displayDetails()
 
 
 
